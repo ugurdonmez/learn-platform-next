@@ -1,0 +1,128 @@
+$font-size: 50px;
+.example {
+  font-size: $font-size;
+}
+
+.layoutCss {
+    background-color: #3b3b3b !important;
+    background: #3b3b3b;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-repeat: no-repeat;
+    font-family: roboto;
+    min-width: 800px;
+    position: relative;
+}
+
+.appLayout {
+    width: 800px;
+    background: #e9e9e9;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    font-family: roboto;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+.moduleCard {
+    background-color: #e9e9e9 !important;
+    border: none;
+}
+
+.moduleCircle {
+    height: 100px;
+    width: 100px;
+    border-radius: 56px;
+    background: #8bc34a;
+    margin: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    cursor: pointer;
+    transition: box-shadow ease-in 100ms;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.moduleCircle:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+}
+
+.moduleCircle img {
+    margin: 5px;
+    height: 90px;
+    width: 90px;
+    pointer-events: none;
+}
+
+.moduleCircleText {
+    text-align: center;
+    margin: 10px 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+.moduleView {
+    margin: 0 auto;
+    position: relative;
+    width: 660px;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.moduleBox {
+    position: relative;
+    height: 155px;
+    width: 155px;
+    margin: 4px;
+    float: left;
+    background: #f3f3f3;
+    color: #737373;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    overflow: hidden;
+    transition: box-shadow ease-in 100ms;
+    cursor: pointer;
+}
+
+.moduleBox:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.moduleBoxNumber {
+    padding: 4px;
+    font-size: 12px;
+    float: right;
+}
+
+.moduleBoxName {
+    padding: 20px 10px;
+    text-align: left;
+    height: 115px;
+}
+
+.moduleBoxInfo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8bc34a;
+    color: #fff;
+    display: flex;
+
+    span {
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 40px;
+        margin: 0 10px;
+    }
+}
+
+.moduleBoxIcon {
+    display: block;
+        float: right;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+}
