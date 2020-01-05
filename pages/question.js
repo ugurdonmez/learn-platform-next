@@ -1,5 +1,4 @@
 import Layout from '../components/Layout'
-import TestClass from '../data/dataService'
 import DataService from '../data/dataService';
 
 const Question = props => {
@@ -16,14 +15,16 @@ const Question = props => {
 
 Question.getInitialProps = async function (context) {
 
+    let name= context.query.name,
+        moduleNumber = context.query.module,
+        questionNumber = context.query.question
+
     let dataService = new DataService()
-    const question = dataService.getQuestion('aaa', 'aaa', 'aaa')
+    const question = dataService.getQuestion(name, moduleNumber, questionNumber)
 
     return  {
         question
     }
-       
-     
 }
 
 export default Question

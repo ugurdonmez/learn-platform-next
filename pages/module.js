@@ -1,11 +1,9 @@
 import Router from 'next/router'
 import Layout from '../components/Layout'
-import { getBasicConcepts } from '../data/basicConcepts'
+import { getBasicConcepts } from '../data/store/basicConcepts'
 import ModuleBox from '../components/ModuleBox'
 
 const Module = props => {
-
-    console.log(props)
 
     return (
         <Layout>
@@ -21,6 +19,7 @@ const Module = props => {
                                 click={() => Router.push({
                                     pathname: '/question',
                                     query: { 
+                                        name: props.name,
                                         module: i,
                                         question: 0,
                                     }
@@ -36,7 +35,8 @@ Module.getInitialProps = async function (context) {
     const moduleName = context.query.data
 
     return { 
-        data: getBasicConcepts()
+        data: getBasicConcepts(),
+        name: moduleName
      }
 }
 

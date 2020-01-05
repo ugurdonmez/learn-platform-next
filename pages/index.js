@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Router from 'next/router'
 import Layout from '../components/Layout'
 import { Card, Row } from 'react-bootstrap'
@@ -20,7 +19,7 @@ const Index = props => (
                         text="Temel Bilgiler"
                         click={() => Router.push({
                             pathname: '/module',
-                            query: { data: 'getBasicConcepts'}
+                            query: { data: 'basicConcepts'}
                         })}></ModuleCircle>
                 </Row>
 
