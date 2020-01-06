@@ -30,7 +30,9 @@ const Question = props => {
             </span>
     }
 
-    let nextQuestionExist = props.questionNumber < props.totalQuestion
+    let nextModule = props.questionNumber < props.totalQuestion ? props.moduleNumber : parseInt(props.moduleNumber) + 1
+    let nextQuestionNumber = props.questionNumber < props.totalQuestion ? props.questionNumber : 0
+
 
     return (
         <Layout headerTitle={props.name}
@@ -54,17 +56,16 @@ const Question = props => {
             <button 
                 className="questionNextButton"
                 onClick={() => {
-                    if (nextQuestionExist) {
                         console.log('clicked')
                         Router.push({
                             pathname: '/question',
                             query: { 
                                 name: props.name,
-                                module: props.moduleNumber,
-                                question: props.questionNumber+1,
+                                module: nextModule,
+                                question: nextQuestionNumber,
                             }
                         })
-                    }
+                    
                 }}>
                 <FontAwesomeIcon icon={faArrowRight} style={{color:"#FFF"}} size="2x"/>
             </button>
@@ -80,7 +81,6 @@ Question.getInitialProps = async function (context) {
 
     let dataService = new DataService()
     const result = dataService.getQuestion(name, moduleNumber, questionNumber)
-
 
     return  {
         name,
