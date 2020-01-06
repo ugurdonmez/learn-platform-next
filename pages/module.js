@@ -6,9 +6,6 @@ import { getControlStructures } from '../data/store/controlStructures'
 
 const Module = props => {
 
-    console.log('module props')
-    console.log(props)
-
     return (
         <Layout headerTitle={props.name}>
             <div className="moduleView">
