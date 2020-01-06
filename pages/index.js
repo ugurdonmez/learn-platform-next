@@ -27,7 +27,10 @@ const Index = props => (
                     <ModuleCircle
                         logo={kontrolIcon}
                         text="Kontrol Yapilari"
-                        click={() => console.log('click in module')}></ModuleCircle>
+                        click={() => Router.push({
+                            pathname: '/module',
+                            query: { data: 'controlStructures'}
+                        })}></ModuleCircle>
 
                     <ModuleCircle
                         logo={fonksiyonIcon}

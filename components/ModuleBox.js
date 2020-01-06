@@ -3,7 +3,6 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export default function ModuleBox(props) {
 
-
     return (
         <div
             onClick={props.click}

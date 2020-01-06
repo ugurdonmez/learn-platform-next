@@ -2,11 +2,15 @@ import Router from 'next/router'
 import Layout from '../components/Layout'
 import { getBasicConcepts } from '../data/store/basicConcepts'
 import ModuleBox from '../components/ModuleBox'
+import { getControlStructures } from '../data/store/controlStructures'
 
 const Module = props => {
 
+    console.log('module props')
+    console.log(props)
+
     return (
-        <Layout>
+        <Layout headerTitle={props.name}>
             <div className="moduleView">
                 {props.data.modules.map((module, i) => 
                             <ModuleBox 
@@ -34,8 +38,16 @@ Module.getInitialProps = async function (context) {
 
     const moduleName = context.query.data
 
-    return { 
-        data: getBasicConcepts(),
+    let data
+
+    if (moduleName === 'basicConcepts') {
+        data = getBasicConcepts()
+    } else if (moduleName === 'controlStructures') {
+        data = getControlStructures()
+    }
+
+    return {
+        data,
         name: moduleName
      }
 }

@@ -3,6 +3,65 @@ $font-size: 50px;
   font-size: $font-size;
 }
 
+.appHeader {
+    background-color: rgb(54, 171, 203);
+    height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    color: #fff !important;
+    overflow: hidden;
+    -moz-transition: top .2s ease-in-out;
+    -o-transition: top .2s ease-in-out;
+    -webkit-transition: top .2s ease-in-out;
+    transition: top .2s ease-in-out;
+}
+
+.headerModuleLayer {
+    font-size: 26px;
+    line-height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 800px;
+}
+
+.headerWrapper {
+    position: relative;
+    width: 800px;
+    margin: auto;
+}
+
+.headerContent {
+    width: 800px;
+    height: 100%;
+
+    img {
+        height: 100%;
+        float: left;
+    }
+}
+
+.headerTitle {
+    font-size: 26px;
+    display: inline-block;
+}
+
+.questionOutline {
+    background-color: rgb(34, 151, 183);
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-size: 20px;
+}
+
+.questionSizeText {
+    float: right;
+    margin-right: 10px;
+}
+
 .layoutCss {
     background-color: #3b3b3b !important;
     background: #3b3b3b;
@@ -24,6 +83,7 @@ $font-size: 50px;
     font-family: roboto;
     font-size: 16px;
     min-height: 100vh;
+    padding-top: 100px;
 }
 
 .moduleCard {
