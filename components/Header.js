@@ -30,6 +30,7 @@ export default function Header(props) {
         content = 
             <div className="headerContent">
                 <img alt="png" src={python} />
+                {/* <span className="headerTitle">ugur</span> */}
             </div>
     }
 

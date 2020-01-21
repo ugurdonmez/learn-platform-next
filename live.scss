@@ -1,0 +1,151 @@
+.live_header {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: #272822;
+}
+
+.live_wrapper {
+    overflow: hidden;
+    padding: 15px 20px 0 0;
+}
+
+.live_headerLogo {
+    float: left;
+    overflow: hidden;
+    margin: -4px 0 0 45px;
+
+    img {
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+}
+
+.live_topToolbar {
+    background-color: #2f3129;
+    position: absolute;
+    top: 100px;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.defaultActions {
+    height: 35px;
+    overflow: hidden;
+    margin: 15px 0 0 50px;
+    float: left;
+}
+
+.outputTab {
+    position: absolute;
+    top: 15px;
+    left: 60%;
+    overflow: hidden;
+}
+
+.tab-box {
+    width: 75px;
+    height: 40px;
+    background-color: #353632;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #dedede;
+    margin: 0 -3px;
+}
+
+.active {
+    background-color: #272822;
+    color: #fff;
+    font-weight: bold;
+    cursor: auto;
+}
+
+.editorContainer {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    bottom: 80px;
+    left: 0;
+}
+
+.pythonEditor {
+    width: 60%;
+    float: left;
+    height: 100%;
+    z-index: 999;
+}
+
+.ace_editor {
+    position: relative;
+    overflow: hidden;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    direction: ltr;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ace-monokai {
+    background-color: #272822;
+    color: #F8F8F2;
+}
+
+.ace_dark {
+
+}
+
+.ace_text-input {
+    opacity: 0;
+    height: 16px;
+    width: 7.20117px;
+    left: 174.621px;
+    top: 0px;
+
+    position: absolute;
+    z-index: 0;
+    width: 0.5em;
+    height: 1em;
+    opacity: 0;
+    background: transparent;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font: inherit;
+    padding: 0 1px;
+    margin: 0 -1px;
+    text-indent: -1em;
+    -ms-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+    white-space: pre!important;
+}
+
+.ace-monokai .ace_gutter {
+    background: #2F3129;
+    color: #8F908A;
+
+}
+
+.ace_gutter {
+    position: absolute;
+    overflow: hidden;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    cursor: default;
+    z-index: 4;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
