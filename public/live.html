@@ -12,6 +12,7 @@
     }
 </style>
 <link rel="stylesheet" type="text/css" href="live.css" media="screen" />
+<script src="live.js"></script>
 </head>
 <body>
 
@@ -41,14 +42,11 @@
 
     <div class="editorContainer">
         <div class="pythonEditor">
-            <div id="editor">function foo(items) {
-                var x = "All this is syntax highlighted";
-                return x;
-            }</div>
+            <div id="editor">print('test print')</div>
         </div>
 
         <div class="output">
-            <div class="defaultOutput">
+            <div class="defaultOutput" id="editor_out">
                 test output
             </div>
         </div>
@@ -58,8 +56,8 @@
         <div class="wide left">
             <div class="right">
                 <div class="cell right">
-                    <button class="resetCode">RESET</button>
-                    <button class="runCode">RUN</button>
+                    <button class="resetCode" onclick="reset()">RESET</button>
+                    <button class="runCode" onclick="loadDoc()">RUN</button>
                 </div>
             </div>
         </div>
