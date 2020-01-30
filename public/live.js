@@ -9,6 +9,7 @@ function loadDoc() {
             document.getElementById("editor_out").innerHTML = this.responseText;
         }
     };
+    // xhttp.open("POST", "http://localhost:9090/run", true);
     xhttp.open("POST", "http://35.222.66.197:9090/run", true);
     // xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
     xhttp.setRequestHeader('Content-Type', 'text/plain');
@@ -21,4 +22,11 @@ function reset() {
     var editor = ace.edit("editor");
     editor.setValue("");
 }
-  
+
+function loaded() {
+    var editor = ace.edit("editor")
+
+    var params = new URLSearchParams(window.location.search)
+
+    editor.setValue(decodeURI(params.get('code')))
+}
