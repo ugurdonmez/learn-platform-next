@@ -8,7 +8,11 @@ const Question = props => {
     let code
 
     if (props.question.code) {
-        let url = "live.html?code=" + encodeURI(props.question.codeText)
+        let btn
+        if (props.question.codeText) {
+            let url = "live.html?code=" + encodeURI(props.question.codeText)
+            btn = <a href={url} className="runCodeLink">Kendiniz Deneyin</a>
+        }
         code =
             <div className="codeContainer">
                 <span className="codeBlock">
@@ -16,7 +20,8 @@ const Question = props => {
                         {props.question.code.map((line, i) => <div>{line}</div>)}
                     </span>
                 </span>
-                <a href={url} className="runCodeLink">Kendiniz Deneyin</a>
+
+                {btn}
             </div>
     }
 

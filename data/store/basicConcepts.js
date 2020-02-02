@@ -12,7 +12,7 @@ export const getBasicConcepts = () => {
                     },
                     {
                         title: "Python ‘a hoş geldiniz",
-                        text: "Python'un üç ana versiyonu 1,2,3' tür. Bunlar 2.7 ve 3.3 gibi küçük sürümlere ayrılmıştır. python 3 için yazılmış kodun gelecekteki tüm sürümlerde çalışması garanti edilir. Her iki python sürüm 2 ve 3 şu anda kullanılmaktadır. bu ders python 3&#39;ü kapsar ancak bir sürümden diğerine geçmek zor değildir. python&#39;un çeşitli dillerde yazılmış birçok farklı uygulaması vardır. Bu kursta kullanılan sürüm CPython bugüne kadarki en popüler olan"
+                        text: "Python'un üç ana versiyonu 1,2,3' tür. Bunlar 2.7 ve 3.3 gibi küçük sürümlere ayrılmıştır. python 3 için yazılmış kodun gelecekteki tüm sürümlerde çalışması garanti edilir. Her iki python sürüm 2 ve 3 şu anda kullanılmaktadır. Bu ders python 3'ü kapsar ancak bir sürümden diğerine geçmek zor değildir. Python'un çeşitli dillerde yazılmış birçok farklı uygulaması vardır."
                     }
                 ]
             },
@@ -46,7 +46,6 @@ export const getBasicConcepts = () => {
                             ">>> 5+4-7",
                             "2"
                         ],
-                        codeText: "4+7\n5+4-7",
                         note: "Operatörlerin (artı veya eksi) yanındaki boşluk ifadeleri isteğe bağlıdır. Bitişik yazılırsa yada ayrı olarak yazılırsa kod çalışacaktır. Ancak boşluklu olan işlemlerin okunması daha kolay olacaktır."
                     },
                     {
@@ -107,7 +106,58 @@ export const getBasicConcepts = () => {
                             ">>> 5+1.33",
                             "6.33",
                         ],
-                        note: "bir tam sayıya bir float tipi değişken eklenebilir. Çünkü python tam sayıyı kendi içinde float’a dönüştürür. Bu dönüşüm işlemi python da kural dışı bir istisnadır. Genellikle bu işlemleri yapmak istiyorsanız kendiniz dönüştürmeniz gerekebilir."
+                        note: "Bir tam sayıya bir float tipi değişken eklenebilir. Çünkü python tam sayıyı kendi içinde float’a dönüştürür. Bu dönüşüm işlemi python da kural dışı bir istisnadır. Genellikle bu işlemleri yapmak istiyorsanız kendiniz dönüştürmeniz gerekebilir."
+                    }
+                ]
+            },
+            {
+                title: "Diğer sayısal işlemler",
+                questions: [
+                    {
+                        title: "Üst alma",
+                        text: "4 işlemin yanı sıra python bir sayının üstünü alma işlemini de destekliyor. Bu işlemi kullanmak için iki yıldız(**) ifadesi kullanılıyor.",
+                        code: [
+                            ">>> 3**3",
+                            "27",
+                            ">>> >>> 16**(1/2)",
+                            "4.0",
+                        ],
+                        note: "üst alma işlemini zincirleyebilirsiniz. Bir başka deyişle birden fazla kez üst alma işlemi gerçekleştirebilirsiniz. Örneğin 3 4 3"
+                    },
+                    {
+                        title: "Bölüm ve kalan",
+                        text: "Bir bölümün bölümünü ve kalanını belirlemek için sırasıyla normal bölme işlemi ve kalan bulma işlemleri uygulanır. Tam sayı bölünmesini hesaplamak için iki eğik çizgi(//) ve kalanı hesaplamak için yüzde(%) ifadeleri kullanılır. Bu operatörler hem float hem de tam sayı tipi değişkenlerde kullanılabilir.",
+                        code: [
+                            ">>> 25//3",
+                            "8",
+                            ">>> 2.5%2",
+                            "0.5",
+                        ],
+                        note: " örnek vermek gerekirse 10%3 ifadesi bize “1”  değerini verir. Çünkü 3*3+1 10’a eşittir.",
+                    }
+                ]
+            },
+            {
+                title: "Metinler",
+                questions: [
+                    {
+                        title: "Metinler",
+                        text: "Python da  metin kullanmak istiyosanız, bir kalıp kullanmanız gerekir. Başta ve sonda tek tırnak arasına metin girilerek yada başta ve sonra çift tırnak arasına metin girilerek bir kalıp oluşturulur.Python konsolu bir kalıp görüntülediğinde, genellikler tek tırnak kullanır. Bir kalıp için kullanılan tırnak ifadesi, herhangi bir şekilde nasıl davrandığını etkilemez",
+                        code: [
+                            ">>> \"Global sınıf bilim merkezi\"",
+                            "'Global sınıf bilim merkezi'",
+                            ">>> 'Her zaman bizlere uygun bir eğitimi vardır'",
+                            "'Her zaman bizlere uygun bir eğitimi vardır'",
+                        ],
+                    },
+                    {
+                        title: "Metinler",
+                        text: "Bazı karakterler doğrudan bir kalıba eklenemez. Örneğin çift tırnaklar doğrudan çift tırnakların içine alınamazlar. Çünkü bu kalıbın erken bittiğini anlamına gelir. Bu gibi karakterlerin önüne ters eğik çizgi (\) koyularak programın ondan kaçınması sağlanmalıdır. Yeni bir satıra geçilirken de ters eğik çizgi kullanılır. İki tırnak yada tek tırnak ifadelerinden kaçınma işlemi sadece aynı tipte tırnak kullanılırsa yapılmalıdır.",
+                        code: [
+                            ">>>  'Global Sınıf\\'ın öğrencileri her zaman çok mutludur'",
+                            "\"Global Sınıf'ın öğrencileri her zaman çok mutludur\"",
+                        ],
+                        note: "Ters eğik çizgiler, sekmelerden, klavyede bulunmayan Unicode karakterlerinde ve güvenilir şekilde yazdırılamayan diğer çeşitli şeylerden kaçınman için kullanılabilir. Bu karakterler kaçış karakterleri olarak bilinir.",
                     }
                 ]
             }, 
